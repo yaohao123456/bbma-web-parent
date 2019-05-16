@@ -10,14 +10,18 @@ import Vuex from 'vuex'
 //import NProgress from 'nprogress'
 //import 'nprogress/nprogress.css'
 import routes from './routes'
-import Mock from './mock'
-Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
 
+import axios from 'axios'
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.use(Vuex)
 
+
+axios.defaults.baseURL = 'https://localhost:1314/services'  //类似于html里的base标签，通常是网关地址或easymock的地址
+// 将API方法绑定到全局  /plat/login
+Vue.prototype.$http = axios
+Vue.config.productionTip = false
 //NProgress.configure({ showSpinner: false });
 
 const router = new VueRouter({

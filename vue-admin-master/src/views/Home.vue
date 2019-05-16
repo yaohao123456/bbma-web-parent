@@ -75,7 +75,7 @@
 	export default {
 		data() {
 			return {
-				sysName:'VUEADMIN',
+				sysName:'buy back 后台管理',
 				collapsed:false,
 				sysUserName: '',
 				sysUserAvatar: '',
